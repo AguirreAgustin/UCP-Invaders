@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 import ucpinvaders.Nave;
-
+import ucpinvaders.InvasorGhost;
 import ucpinvaders.Invasor;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -82,6 +82,18 @@ public class NaveTest {
         assertEquals(i.getVida(), 0);
         
     }
+    public void validarDestruirGhost(){
+        
+        InvasorGhost iG = new InvasorGhost(100,25);
+        Nave n = new Nave(100,50);
+        int vida = iG.getVida();
+        n.destruirGhost(iG);
+        
+        assertEquals(iG.getVida(), vida);
+    }
+    
+    
+    
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
     //

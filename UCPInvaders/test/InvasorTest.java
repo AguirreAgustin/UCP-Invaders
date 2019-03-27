@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 import ucpinvaders.Invasor;
+import ucpinvaders.InvasorGhost;
 import ucpinvaders.Nave;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -36,6 +37,8 @@ public class InvasorTest {
     @After
     public void tearDown() {
     }
+    
+    
     @Test
     public void validarChocarNave(){
 
@@ -56,6 +59,28 @@ public class InvasorTest {
         int valor = (i.getVelocidad()*20)/100;
         vida = vida - valor;
         assertEquals(n.getVida(), vida);
+    }
+    
+    @Test
+    public void validarDestruirGhostNave(){
+        Nave n = new Nave(100,100);
+        InvasorGhost iG =  new InvasorGhost (100, 50);
+        int vida = n.getVida();
+        
+        iG.destruirNave(n);
+        int valor = (iG.getVelocidad()*20)/100;
+        vida = vida - valor;
+        assertEquals(n.getVida(), vida);
+    }
+    @Test
+    public void validarChocarGhostNave(){
+
+        Nave n = new Nave(100,100);
+        InvasorGhost iG =  new InvasorGhost (100, 100);
+        int vida = n.getVida();
+        iG.chocarNave(n);
+        
+        assertEquals(n.getVida(),vida);
     }
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:

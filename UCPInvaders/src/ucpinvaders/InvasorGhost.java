@@ -9,12 +9,11 @@ package ucpinvaders;
  *
  * @author Agustin
  */
-public class Nave {
-    
+public class InvasorGhost {
     private int velocidad;
     private int vida;
     
-    public Nave(int pVida,int pVelocidad){
+    public InvasorGhost(int pVida,int pVelocidad){
     
         this.setVida(pVida);
         
@@ -51,16 +50,15 @@ public class Nave {
         this.vida = vida;
     }
     
-    
-    
-    public void destruir(Invasor invasor){
-        int vida = invasor.getVida();
-        int valor = (this.getVelocidad()* invasor.getVelocidad())/100;
-        vida = vida - valor;
-        invasor.setVida(vida);
+    public void chocarNave(Nave pNave){
         
     }
-    public void destruirGhost(InvasorGhost iG){
+    public void destruirNave(Nave pNave){
         
+        int vida = pNave.getVida();
+        
+        int valor = (this.getVelocidad()*20)/100;
+        vida = vida - valor;
+        pNave.setVida(vida);
     }
 }
