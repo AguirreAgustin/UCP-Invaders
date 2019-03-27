@@ -44,10 +44,22 @@ public class AsteroideTest {
         Asteroide a = new Asteroide(100);
         int vida = n.getVida();
         a.chocarNave(n);
-        int valor = (((a.getVelocidad() * 2) * n.getVelocidad())/100);
+        int valor = (n.getVelocidad()*a.getVelocidad())/200;
         vida = vida - valor;
         assertEquals(n.getVida(), vida);
          
+    }
+    @Test
+    public void validarChocarInvasor(){
+        
+        Invasor i = new Invasor (100,80);
+        Asteroide a = new Asteroide(100);
+        int vida = i.getVida();
+        a.chocarInvasor(i);
+        int valor = (a.getVelocidad()*i.getVelocidad())/200;
+        vida = vida - valor;
+        assertEquals(i.getVida(), vida);
+        
     }
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:

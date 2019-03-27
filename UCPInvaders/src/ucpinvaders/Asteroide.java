@@ -33,12 +33,19 @@ public class Asteroide {
     }
     
     public void chocarNave(Nave pNave){
-        pNave.setVida(0);
+        int vida = pNave.getVida();
+        int valor = (pNave.getVelocidad()*this.getVelocidad())/200;
+        vida = vida - valor;
+        pNave.setVida(vida);
     
     }
     
-    public void chocarInvasor(Nave pNave){
-        pNave.setVida(0);
+    public void chocarInvasor(Invasor pInvasor){
+        int vida = pInvasor.getVida();
+        int valor = (pInvasor.getVelocidad()*this.getVelocidad())/200;
+        vida = vida - valor;
+        pInvasor.setVida(vida);
+        
     
     }
     
