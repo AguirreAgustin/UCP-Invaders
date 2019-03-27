@@ -69,7 +69,20 @@ public class NaveTest {
         assertEquals(i.getVida(), 100);
         
     }
-    
+    @Test
+    public void validarDestruir0(){
+        
+        Nave n = new Nave(100,100);
+        Invasor i = new Invasor(100,100);
+        int vida;
+        vida=i.getVida();
+        
+        n.destruir(i);
+        
+        
+        assertEquals(i.getVida(), 0);
+        
+    }
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
     //
