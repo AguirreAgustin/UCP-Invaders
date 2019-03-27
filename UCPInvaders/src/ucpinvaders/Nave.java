@@ -11,8 +11,54 @@ package ucpinvaders;
  */
 public class Nave {
     
-    public int velocidad;
+    private int velocidad;
+    private int vida;
+    
+    public Nave(int pVida,int pVelocidad){
+    
+        this.setVida(pVida);
+        
+        this.setVelocidad(pVelocidad);
+        
+        
+    }
+
+    /**
+     * @return the velocidad
+     */
+    public int getVelocidad() {
+        return velocidad;
+    }
+
+    /**
+     * @param velocidad the velocidad to set
+     */
+    public void setVelocidad(int velocidad) {
+        this.velocidad = velocidad;
+    }
+
+    /**
+     * @return the vida
+     */
+    public int getVida() {
+        return vida;
+    }
+
+    /**
+     * @param vida the vida to set
+     */
+    public void setVida(int vida) {
+        this.vida = vida;
+    }
     
     
+    
+    public void destruir(Invasor invasor){
+        int vida = this.getVida();
+        int valor = (this.getVelocidad()* invasor.getVelocidad())/100;
+        vida = vida - valor;
+        this.setVida(vida);
+        
+    }
     
 }
