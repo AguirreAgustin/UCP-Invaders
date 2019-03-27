@@ -50,6 +50,8 @@ public class Invasor {
         this.vida = vida;
     }
     
-    
+    public void chocarNave(Nave pNave){
+        pNave.setVida(0);
+    }
     
 }
