@@ -53,5 +53,13 @@ public class Invasor {
     public void chocarNave(Nave pNave){
         pNave.setVida(0);
     }
+    public void destruirNave(Nave pNave){
+        
+        int vida = pNave.getVida();
+        
+        int valor = (this.getVelocidad()*20)/100;
+        vida = vida - valor;
+        pNave.setVida(vida);
+    }
     
 }
