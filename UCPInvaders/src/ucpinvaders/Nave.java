@@ -54,10 +54,10 @@ public class Nave {
     
     
     public void destruir(Invasor invasor){
-        int vida = this.getVida();
+        int vida = invasor.getVida();
         int valor = (this.getVelocidad()* invasor.getVelocidad())/100;
         vida = vida - valor;
-        this.setVida(vida);
+        invasor.setVida(vida);
         
     }
     
