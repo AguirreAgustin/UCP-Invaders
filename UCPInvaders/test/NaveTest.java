@@ -60,8 +60,8 @@ public class NaveTest {
         
         Nave n = new Nave(100,0);
         Invasor i = new Invasor(100,0);
-        int vida;
-        vida=i.getVida();
+        
+    
         
         n.destruir(i);
         
@@ -74,8 +74,7 @@ public class NaveTest {
         
         Nave n = new Nave(100,100);
         Invasor i = new Invasor(100,100);
-        int vida;
-        vida=i.getVida();
+       
         
         n.destruir(i);
         

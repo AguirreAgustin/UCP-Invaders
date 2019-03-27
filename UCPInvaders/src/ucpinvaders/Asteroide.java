@@ -32,4 +32,14 @@ public class Asteroide {
         this.velocidad = velocidad;
     }
     
+    public void chocarNave(Nave pNave){
+        pNave.setVida(0);
+    
+    }
+    
+    public void chocarInvasor(Nave pNave){
+        pNave.setVida(0);
+    
+    }
+    
 }
