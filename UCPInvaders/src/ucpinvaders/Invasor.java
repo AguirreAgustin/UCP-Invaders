@@ -9,32 +9,20 @@ package ucpinvaders;
  *
  * @author Agustin
  */
-public class Invasor {
-    private int velocidad;
+public class Invasor extends Artefacto{
+    
     private int vida;
     
     public Invasor(int pVida,int pVelocidad){
-    
+        
+        super(pVelocidad);
         this.setVida(pVida);
         
-        this.setVelocidad(pVelocidad);
         
         
+        
     }
-
-    /**
-     * @return the velocidad
-     */
-    public int getVelocidad() {
-        return velocidad;
-    }
-
-    /**
-     * @param velocidad the velocidad to set
-     */
-    public void setVelocidad(int velocidad) {
-        this.velocidad = velocidad;
-    }
+    
 
     /**
      * @return the vida

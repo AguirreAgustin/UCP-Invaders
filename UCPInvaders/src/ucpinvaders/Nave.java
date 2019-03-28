@@ -9,33 +9,21 @@ package ucpinvaders;
  *
  * @author Agustin
  */
-public class Nave {
+public class Nave extends Artefacto{
     
-    private int velocidad;
+    
     private int vida;
     
     public Nave(int pVida,int pVelocidad){
-    
+        super(pVelocidad);
         this.setVida(pVida);
         
-        this.setVelocidad(pVelocidad);
+        
         
         
     }
 
-    /**
-     * @return the velocidad
-     */
-    public int getVelocidad() {
-        return velocidad;
-    }
-
-    /**
-     * @param velocidad the velocidad to set
-     */
-    public void setVelocidad(int velocidad) {
-        this.velocidad = velocidad;
-    }
+    
 
     /**
      * @return the vida
@@ -58,6 +46,9 @@ public class Nave {
         int valor = (this.getVelocidad()* invasor.getVelocidad())/100;
         vida = vida - valor;
         invasor.setVida(vida);
+        
+    }
+    public void destruir(InvasorGhost invasor){
         
     }
     public void destruirGhost(InvasorGhost iG){
