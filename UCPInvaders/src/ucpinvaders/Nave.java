@@ -39,7 +39,5 @@ public class Nave extends Personaje{
     public void destruir(InvasorGhost invasor){
         
     }
-    public void destruirGhost(InvasorGhost iG){
-        
-    }
+    
 }

@@ -88,7 +88,7 @@ public class NaveTest {
         InvasorGhost iG = new InvasorGhost(100,25);
         Nave n = new Nave(100,50);
         int vida = iG.getVida();
-        n.destruirGhost(iG);
+        n.destruir(iG);
         
         assertEquals(iG.getVida(), vida);
     }
@@ -98,7 +98,7 @@ public class NaveTest {
         InvasorGhost iG = new InvasorGhost(50,25);
         Nave n = new Nave(50,50);
         int vida = iG.getVida();
-        n.destruirGhost(iG);
+        n.destruir(iG);
         
         assertEquals(iG.getVida(), vida);
     }
