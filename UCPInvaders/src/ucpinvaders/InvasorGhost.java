@@ -30,4 +30,7 @@ public class InvasorGhost extends Personaje{
         vida = vida - valor;
         pNave.setVida(vida);
     }
+    public void destruitePorNave(Nave nave){
+    
+    }
 }

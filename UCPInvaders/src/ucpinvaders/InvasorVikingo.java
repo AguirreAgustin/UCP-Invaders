@@ -16,4 +16,10 @@ public class InvasorVikingo extends Personaje{
         
         
     }
+    public void destruitePorNave(Nave nave){
+        int vida = this.getVida();
+        int valor = (nave.getVelocidad()*10)/100;
+        vida = vida - valor;
+        this.setVida(vida);
+    }
 }

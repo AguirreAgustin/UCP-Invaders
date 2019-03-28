@@ -30,5 +30,7 @@ public class Personaje extends Artefacto{
     public void setVida(int vida) {
         this.vida = vida;
     }
+    public void destruitePorNave(Nave nave){
     
+    }
 }

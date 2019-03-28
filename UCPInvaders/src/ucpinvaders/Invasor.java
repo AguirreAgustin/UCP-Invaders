@@ -37,4 +37,11 @@ public class Invasor extends Personaje{
         pNave.setVida(vida);
     }
     
+    public void destruitePorNave(Nave nave){
+        int vida = this.getVida();
+        int valor = (this.getVelocidad()* nave.getVelocidad())/100;
+        vida = vida - valor;
+        this.setVida(vida);
+    }
+    
 }
