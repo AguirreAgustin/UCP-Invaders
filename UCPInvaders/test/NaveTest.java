@@ -5,6 +5,7 @@
  */
 import ucpinvaders.Nave;
 import ucpinvaders.InvasorGhost;
+import ucpinvaders.InvasorVikingo;
 import ucpinvaders.Invasor;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -69,6 +70,23 @@ public class NaveTest {
         assertEquals(i.getVida(), 100);
         
     }
+    @Test
+    public void validarDestruirVikingo1(){
+        Nave nave = new Nave(100,50);
+        InvasorVikingo vikingo = new InvasorVikingo(100,100);
+        nave.destruir(vikingo);
+        assertEquals(vikingo.getVida(), 95);
+    }
+    
+    @Test
+    public void validarDestruirVikingo2(){
+        Nave nave = new Nave(100,100);
+        InvasorVikingo vikingo = new InvasorVikingo(100,100);
+        nave.destruir(vikingo);
+        assertEquals(vikingo.getVida(), 90);
+    }
+    
+    
     @Test
     public void validarDestruir0(){
         

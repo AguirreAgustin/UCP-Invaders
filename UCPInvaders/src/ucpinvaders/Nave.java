@@ -36,8 +36,13 @@ public class Nave extends Personaje{
             vida = vida - valor;
             personaje.setVida(vida);
         
-        }else {
-        
+        }else if(personaje instanceof InvasorVikingo){
+            int vida = personaje.getVida();
+            int valor = (this.getVelocidad()*10)/100;
+            vida = vida - valor;
+            personaje.setVida(vida);
+            
+        }else{
         }
         
         
