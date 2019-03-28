@@ -9,46 +9,15 @@ package ucpinvaders;
  *
  * @author Agustin
  */
-public class InvasorGhost {
-    private int velocidad;
-    private int vida;
+public class InvasorGhost extends Personaje{
     
     public InvasorGhost(int pVida,int pVelocidad){
     
-        this.setVida(pVida);
-        
-        this.setVelocidad(pVelocidad);
+        super(pVida,pVelocidad);
         
         
     }
 
-    /**
-     * @return the velocidad
-     */
-    public int getVelocidad() {
-        return velocidad;
-    }
-
-    /**
-     * @param velocidad the velocidad to set
-     */
-    public void setVelocidad(int velocidad) {
-        this.velocidad = velocidad;
-    }
-
-    /**
-     * @return the vida
-     */
-    public int getVida() {
-        return vida;
-    }
-
-    /**
-     * @param vida the vida to set
-     */
-    public void setVida(int vida) {
-        this.vida = vida;
-    }
     
     public void chocarNave(Nave pNave){
         

@@ -9,14 +9,14 @@ package ucpinvaders;
  *
  * @author Agustin
  */
-public class Nave extends Artefacto{
+public class Nave extends Personaje{
     
     
-    private int vida;
+    
     
     public Nave(int pVida,int pVelocidad){
-        super(pVelocidad);
-        this.setVida(pVida);
+        super(pVida,pVelocidad);
+        
         
         
         
@@ -25,19 +25,7 @@ public class Nave extends Artefacto{
 
     
 
-    /**
-     * @return the vida
-     */
-    public int getVida() {
-        return vida;
-    }
-
-    /**
-     * @param vida the vida to set
-     */
-    public void setVida(int vida) {
-        this.vida = vida;
-    }
+    
     
     
     
