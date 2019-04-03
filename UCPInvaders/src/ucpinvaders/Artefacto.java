@@ -9,7 +9,7 @@ package ucpinvaders;
  *
  * @author Agustin
  */
-public class Artefacto {
+public class Artefacto implements IChocable{
     private int velocidad;
     
     public Artefacto(int velocidad){
@@ -30,5 +30,9 @@ public class Artefacto {
     public void setVelocidad(int velocidad) {
         this.velocidad = velocidad;
     }
+    
+    
+    
+    
     
 }
