@@ -12,7 +12,7 @@ package ucpinvaders;
 public interface IChocable {
     
     public void chocar();
-    public void getVelocidad();
+    public int getVelocidad();
     public void chocate();
     
 }

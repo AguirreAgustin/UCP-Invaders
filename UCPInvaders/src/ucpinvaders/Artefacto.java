@@ -30,6 +30,16 @@ public class Artefacto implements IChocable{
     public void setVelocidad(int velocidad) {
         this.velocidad = velocidad;
     }
+
+    @Override
+    public void chocar() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void chocate() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
     
