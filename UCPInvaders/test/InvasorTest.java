@@ -42,55 +42,55 @@ public class InvasorTest {
     @Test
     public void validarChocarNave(){
 
-        Nave n = new Nave(100,100);
-        Invasor i =  new Invasor (100, 100);
-        i.chocarNave(n);
+        Nave nave = new Nave(100,100);
+        Invasor invasor =  new Invasor (100, 100);
+        invasor.chocar(nave);
         
-        assertEquals(n.getVida(),0);
+        assertEquals(nave.getVida(),0);
     }
     
     @Test
     public void validarDestruirNave(){
-        Nave n = new Nave(100,100);
-        Invasor i =  new Invasor (100, 50);
-        int vida = n.getVida();
+        Nave nave = new Nave(100,100);
+        Invasor invasor =  new Invasor (100, 50);
+        int vida = nave.getVida();
         
-        i.destruirNave(n);
-        int valor = (i.getVelocidad()*20)/100;
+        invasor.destruirNave(nave);
+        int valor = (invasor.getVelocidad()*20)/100;
         vida = vida - valor;
-        assertEquals(n.getVida(), vida);
+        assertEquals(nave.getVida(), vida);
     }
     
     @Test
     public void validarDestruirGhostNave(){
-        Nave n = new Nave(100,100);
-        InvasorGhost iG =  new InvasorGhost (100, 50);
-        int vida = n.getVida();
+        Nave nave = new Nave(100,100);
+        InvasorGhost invasorG =  new InvasorGhost (100, 50);
+        int vida = nave.getVida();
         
-        iG.destruirNave(n);
-        int valor = (iG.getVelocidad()*20)/100;
+        invasorG.destruirNave(nave);
+        int valor = (invasorG.getVelocidad()*20)/100;
         vida = vida - valor;
-        assertEquals(n.getVida(), vida);
+        assertEquals(nave.getVida(), vida);
     }
     @Test
     public void validarChocarGhostNave(){
 
-        Nave n = new Nave(100,100);
-        InvasorGhost iG =  new InvasorGhost (100, 100);
-        int vida = n.getVida();
-        iG.chocarNave(n);
+        Nave nave = new Nave(100,100);
+        InvasorGhost invasorG =  new InvasorGhost (100, 100);
+        int vida = nave.getVida();
+        invasorG.chocar(nave);
         
-        assertEquals(n.getVida(),vida);
+        assertEquals(nave.getVida(),vida);
     }
     @Test
     public void validarChocarGhostNave2(){
 
-        Nave n = new Nave(55,100);
-        InvasorGhost iG =  new InvasorGhost (100, 100);
-        int vida = n.getVida();
-        iG.chocarNave(n);
+        Nave nave = new Nave(55,100);
+        InvasorGhost invasorG =  new InvasorGhost (100, 100);
+        int vida = nave.getVida();
+        invasorG.chocar(nave);
         
-        assertEquals(n.getVida(),vida);
+        assertEquals(nave.getVida(),vida);
     }
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:

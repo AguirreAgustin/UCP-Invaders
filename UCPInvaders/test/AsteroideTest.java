@@ -43,7 +43,7 @@ public class AsteroideTest {
         Nave n = new Nave (100,80);
         Asteroide a = new Asteroide(100);
         int vida = n.getVida();
-        a.chocarNave(n);
+        a.chocar(n);
         int valor = (n.getVelocidad()*a.getVelocidad())/200;
         vida = vida - valor;
         assertEquals(n.getVida(), vida);
@@ -55,7 +55,7 @@ public class AsteroideTest {
         Invasor i = new Invasor (100,80);
         Asteroide a = new Asteroide(100);
         int vida = i.getVida();
-        a.chocarInvasor(i);
+        a.chocar(i);
         int valor = (a.getVelocidad()*i.getVelocidad())/200;
         vida = vida - valor;
         assertEquals(i.getVida(), vida);

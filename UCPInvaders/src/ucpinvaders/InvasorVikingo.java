@@ -16,6 +16,19 @@ public class InvasorVikingo extends Personaje{
         
         
     }
+    @Override
+    public void chocar(IChocable victima){
+        
+        victima.chocate((this.getVelocidad()*90)/100);
+    }
+    /*
+    public void chocarNave(Nave nave){
+        
+        int valor = (90*this.getVelocidad())/100;
+        int vida = nave.getVida() - valor;
+        nave.chocate(vida);
+    }*/
+    
     public void destruitePorNave(Nave nave){
         int vida = this.getVida();
         int valor = (nave.getVelocidad()*10)/100;

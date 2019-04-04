@@ -33,4 +33,13 @@ public class Personaje extends Artefacto{
     public void destruitePorNave(Nave nave){
     
     }
+
+    @Override
+    public void chocar(IChocable victima) {
+        
+    }
+
+    public void chocate(int vida) {
+        this.setVida(vida);
+    }
 }

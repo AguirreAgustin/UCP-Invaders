@@ -9,7 +9,7 @@ package ucpinvaders;
  *
  * @author Agustin
  */
-public class Artefacto implements IChocable{
+public  class Artefacto implements IChocable{
     private int velocidad;
     
     public Artefacto(int velocidad){
@@ -32,14 +32,15 @@ public class Artefacto implements IChocable{
     }
 
     @Override
-    public void chocar() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void chocar(IChocable victima) {
+        
     }
 
     @Override
-    public void chocate() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void chocate(int vida) {
     }
+
+    
     
     
     

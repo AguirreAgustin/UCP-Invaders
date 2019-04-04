@@ -11,8 +11,8 @@ package ucpinvaders;
  */
 public interface IChocable {
     
-    public void chocar();
+    public void chocar(IChocable victima);
     public int getVelocidad();
-    public void chocate();
+    public void chocate(int vida);
     
 }

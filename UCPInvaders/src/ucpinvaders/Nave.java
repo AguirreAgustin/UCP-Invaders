@@ -27,7 +27,9 @@ public class Nave extends Personaje{
 
     
     
-    
+    public void chocate(int vida){
+        this.setVida(vida);
+    }
     
     public void destruir(Personaje personaje){
        /* if (personaje instanceof Invasor){
